@@ -1,4 +1,3 @@
-
 name: CI - Pruebas JS
 
 on:
@@ -9,11 +8,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      
-uses: actions/checkout@v3
-name: Instalar Node.js
-    uses: actions/setup-node@v3
-    with:
-      node-version: '18'
-name: Ejecutar tests
-  run: node math.test.js
+      - name: Checkout del código
+        uses: actions/checkout@v3
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Ejecutar tests
+        run: node math.test.js

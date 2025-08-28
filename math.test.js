@@ -1,4 +1,4 @@
-
+// math.test.js
 const { suma, resta, multiplicar } = require('./math.js');
 
 console.log("Iniciando pruebas...");
